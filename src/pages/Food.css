@@ -1,0 +1,55 @@
+.foodpage-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .foodpage-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .food-options {
+    display: grid;
+    /*grid-template-columns: repeat(2, 1fr);  Adjusts the number of columns */
+    gap: 15px; /* Reduced gap between the items */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .food-tile {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 300px;
+    width:300px;
+    margin: 0 auto;
+   /* display: flex;
+    flex-direction: column;*/
+  }
+  
+  .food-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .food-image {
+    width: 100%; /* Ensures the image fills the available width */
+    height: 180px; /* Fixed height */
+    object-fit: cover; /* Maintains the aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .food-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+  }
+  
