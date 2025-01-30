@@ -8,7 +8,7 @@ const Grocery = () => {
 
   // Fetch groceries from API
   useEffect(() => {
-    fetch("https://your-api.com/groceries") // Replace with your API endpoint
+    fetch("http://localhost:5189/api/grocery") 
       .then((response) => response.json())
       .then((data) => setGroceries(data))
       .catch((error) => console.error("Error fetching groceries:", error));
@@ -28,7 +28,7 @@ const Grocery = () => {
         {showForm ? "Cancel" : "Add Item"}
       </button>
 
-      {showForm && <Form apiUrl="https://your-api.com/groceries" onAddItem={handleAddItem} />}
+      {showForm && <Form apiUrl="http://localhost:5189/api/grocery" onAddItem={handleAddItem} />}
 
       <div className="grocery-list">
         {groceries.map((item) => (

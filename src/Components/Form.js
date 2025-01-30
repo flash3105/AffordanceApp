@@ -18,13 +18,23 @@ const Form = ({ apiUrl, onAddItem }) => {
     setFormData({ ...formData, picture: e.target.files[0] });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+  
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("shop", formData.shop);
+    formDataToSend.append("size", formData.size);
+    formDataToSend.append("price", formData.price);
+  
+    // Append file if available
+    if (formData.picture) {
+      formDataToSend.append("file", formData.picture);
+    }
+  
     fetch(apiUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: formDataToSend, // No need to set 'Content-Type', fetch will automatically set it for FormData
     })
       .then((response) => response.json())
       .then((newItem) => {
@@ -33,6 +43,7 @@ const Form = ({ apiUrl, onAddItem }) => {
       })
       .catch((error) => console.error("Error adding item:", error));
   };
+  
 
   return (
     <form className="item-form" onSubmit={handleSubmit}>
