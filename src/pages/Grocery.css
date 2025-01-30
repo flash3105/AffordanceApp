@@ -1,0 +1,78 @@
+.grocery-container {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .grocery-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .add-button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
+  .grocery-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 12px;
+    padding: 10px;
+  }
+  
+  .grocery-item {
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .grocery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .grocery-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .grocery-item h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  .grocery-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 3px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .grocery-list {
+      grid-template-columns: 1fr; /* One item per row on small screens */
+    }
+  }
+  

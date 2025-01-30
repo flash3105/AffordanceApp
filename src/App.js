@@ -6,6 +6,7 @@ import Food from './pages/Food';
 import Transport from './pages/Transport';
 import Hotels from './pages/Hotels';
 import Entertainment from './pages/Entertainment';
+import Grocery from './pages/Grocery';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/transport" element={<Transport/>}/>
         <Route path="/hotels" element={<Hotels/>}/>
         <Route path="/entertainment" element={<Entertainment/>}/>
+        <Route path="/grocery" element={<Grocery/>}/>
      </Routes>
        
     </div>
